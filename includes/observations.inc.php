@@ -1,13 +1,13 @@
 <h1>observation d'évènement</h1>
 <?php
+
 if (isset($_POST['validation'])) {
     $date = htmlentities(trim($_POST['date'])) ?? '';
     $time = htmlentities(trim($_POST['time'])) ?? '';
-    $place = trim($_POST['place']) ?? '';
+    $place = $_POST['place'] ?? '';
     $direction = trim($_POST['direction']) ?? '';
     $meteo = trim($_POST['meteo']) ?? '';
     $observation = htmlentities(trim($_POST['observation'])) ?? '';
-
 
     $erreur = array();
 
@@ -38,22 +38,22 @@ if (isset($_POST['validation'])) {
             $conn = connPdo();
 
             $query = $conn->prepare("
-            INSERT INTO users(obsDateTime, obsDuration, obsLocation, obsCardinalPoint, obsWeather,obsDescription, id_state)
+            INSERT INTO observations(obsDateTime, obsDuration, obsLocation, obsCardinalPoint, obsWeather,obsDescription, id_state)
             VALUES (:date, :time, :place, :direction, :meteo, :observation :id_state)
             ");
 
             $query->bindParam(':date', $date, PDO::PARAM_STR_CHAR);
             $query->bindParam(':time', $time, PDO::PARAM_STR_CHAR);
-            $query->bindParam(':place', $email, PDO::PARAM_STR_CHAR);
+            $query->bindParam(':place', $place, PDO::PARAM_STR_CHAR);
             $query->bindParam(':direction', $direction, PDO::PARAM_STR_CHAR);
             $query->bindParam(':meteo', $meteo, PDO::PARAM_STR_CHAR);
             $query->bindParam(':observation', $observation, PDO::PARAM_STR_CHAR);
-            $query->bindParam(':id_state', $idRole);
+            $query->bindParam(':id_state', $idState, PDO::PARAM_INT);
 
             $query->execute();
             
             echo "<p>Insertions effectuées</p>";
-           
+        
         } catch (PDOException $e) {
             die("Erreur :  " . $e->getMessage());
         }
@@ -61,14 +61,14 @@ if (isset($_POST['validation'])) {
 
     } else {
         $messageErreur = retourErreur($erreur);
-        include 'frmInscription.php';
+        include 'frmObservations.php';
     }
 } 
 else 
 {
     echo "<h2>Merci de renseigner le formulaire&nbsp;:</h2>";
     $date = $time = $meteo = $observation = '';
-    include 'frmObservationtion.php';
+    include 'frmObservations.php';
     
 }
     
