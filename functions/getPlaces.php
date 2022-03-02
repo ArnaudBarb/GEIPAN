@@ -11,7 +11,7 @@ function getPlaces()
         $html = "<select name='place'>";
         for ($i = 0 ; $i < count($resultat) ; $i++) 
         {
-            $html .= "<option value='" . $resultat[$i]['id_state'] . "'>";
+            $html .= "<option value='" . $resultat[$i]['stateNumber'] . "'>";
             $html .= $resultat[$i]['stateNumber'] . " - " . $resultat[$i]['stateLabel'];
             $html .= "</option>";
         }
