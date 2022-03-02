@@ -8,6 +8,7 @@ if (isset($_POST['validation'])) {
     $direction = trim($_POST['direction']) ?? '';
     $meteo = trim($_POST['meteo']) ?? '';
     $observation = htmlentities(trim($_POST['observation'])) ?? '';
+    $idState = 1;
 
     $erreur = array();
 
@@ -38,8 +39,9 @@ if (isset($_POST['validation'])) {
             $conn = connPdo();
 
             $query = $conn->prepare("
-            INSERT INTO observations(obsDateTime, obsDuration, obsLocation, obsCardinalPoint, obsWeather,obsDescription, id_state)
-            VALUES (:date, :time, :place, :direction, :meteo, :observation :id_state)
+            INSERT INTO observations(obsDateTime, obsDuration, obsLocation, obsCardinalPoint,
+                                        obsWeather,obsDescription, id_state)
+            VALUES (:date, :time, :place, :direction, :meteo, :observation, :id_state)
             ");
 
             $query->bindParam(':date', $date, PDO::PARAM_STR_CHAR);
@@ -48,7 +50,7 @@ if (isset($_POST['validation'])) {
             $query->bindParam(':direction', $direction, PDO::PARAM_STR_CHAR);
             $query->bindParam(':meteo', $meteo, PDO::PARAM_STR_CHAR);
             $query->bindParam(':observation', $observation, PDO::PARAM_STR_CHAR);
-            $query->bindParam(':id_state', $idState, PDO::PARAM_INT);
+            $query->bindParam(':id_state', $idState, PDO::PARAM_STR_CHAR);
 
             $query->execute();
             
