@@ -4,7 +4,7 @@
 if (isset($_POST['validation'])) {
     $date = htmlentities(trim($_POST['date'])) ?? '';
     $time = htmlentities(trim($_POST['time'])) ?? '';
-    $place = $_POST['place'] ?? '';
+    $place = htmlentities($_POST['place']) ?? '';
     $direction = trim($_POST['direction']) ?? '';
     $meteo = trim($_POST['meteo']) ?? '';
     $observation = htmlentities(trim($_POST['observation'])) ?? '';
