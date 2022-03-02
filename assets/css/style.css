@@ -29,13 +29,20 @@ form {
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 input{
-    width: 15rem;
+    width: 20rem;
     height: 2rem;
     margin: 1rem;
+    align-content: center;
 }
 label{
     font-size: large;
     font-weight: 600;
+    float: top;
+}
+textarea{
+    width: 20rem;
+    height: 10rem;
 }
