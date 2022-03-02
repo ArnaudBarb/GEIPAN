@@ -15,7 +15,7 @@
                 echo "<li><a href=\"index.php?page=inscription\">Inscription</a></li>";
             }
             ?>
-            <li><a href="index.php?page=observation">renseigner une observation</a></li>
+            <li><a href="index.php?page=observations">renseigner une observation</a></li>
         </ul>
     </nav>
 </header>
