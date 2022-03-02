@@ -4,16 +4,17 @@ function getPlaces()
 {
     $conn = connPdo();
     
-    $requete = $conn->prepare("SELECT * FROM departement ORDER BY name ASC");
+    $requete = $conn->prepare("SELECT * FROM states ORDER BY id_state ASC");
     $requete -> execute();
     $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
     
-        $html = "<select name='place[]'>";
+        $html = "<select name='place'>";
         for ($i = 0 ; $i < count($resultat) ; $i++) {
-                $html .= "<option value='" . $resultat[$i]['code'] . "'>";
-                $html .= $resultat[$i]['name'] . " - " . $resultat[$i]['code'];
+                $html .= "<option value='" . $resultat[$i]['id_state'] . "'>";
+                $html .= $resultat[$i]['stateNumber'] . " - " . $resultat[$i]['stateLabel'];
                 $html .= "</option>";
             }
         $html .= "</select>";
         return $html;
+        
 }
