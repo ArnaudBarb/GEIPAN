@@ -14,7 +14,7 @@ Toute transmission de code est rigoureusement interdite (des vérifications sero
 
 ### Dépôt
 
-- vous devrez, dans un premier temps, faire un *fork* du dépôt disponible à l'adresse [https://github.com/fredericnoel/GEIPAN/](https://github.com/fredericnoel/GEIPAN/) sur votre propre compte GitHub, sur lequel vous travaillerez ;
+<!-- - vous devrez, dans un premier temps, faire un *fork* du dépôt disponible à l'adresse [https://github.com/fredericnoel/GEIPAN/](https://github.com/fredericnoel/GEIPAN/) sur votre propre compte GitHub, sur lequel vous travaillerez ; -->
 - le projet contient déjà une partie du code, l'architecture de l'application ainsi qu'un répertoire (_database) contenant des éléments utiles pour la réalisation de votre épreuve ;
 - vous effectuerez vos *commits* dans votre branche *develop* que vous aurez préalablement créée ;
 - optionnellement, vous pouvez utiliser le modèle *GitFlow* et travailler sur vos branches *features* ;
