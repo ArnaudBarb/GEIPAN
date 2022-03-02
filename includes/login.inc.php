@@ -18,7 +18,7 @@ if (isset($_POST['envoi'])) {
 
             $conn = connPdo();
 
-            $requete = $conn->prepare("SELECT * FROM users WHERE user='$mail'");
+            $requete = $conn->prepare("SELECT * FROM users WHERE userMail='$mail'");
             $requete->execute();
             $resultat = $requete->fetchAll(PDO::FETCH_OBJ);
             
@@ -27,7 +27,7 @@ if (isset($_POST['envoi'])) {
             }
 
             else {
-                $mdpRequete = $resultat[0]->USEPASSWORD;
+                $mdpRequete = $resultat[0]->userPassword;
                 if(password_verify($mdp, $mdpRequete)) {
                     if(!isset($_SESSION['login'])) {
                         $_SESSION['login'] = true;
