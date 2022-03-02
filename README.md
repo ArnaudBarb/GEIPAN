@@ -15,9 +15,9 @@ Toute transmission de code est rigoureusement interdite (des vérifications sero
 ### Dépôt
 
 <!-- - vous devrez, dans un premier temps, faire un *fork* du dépôt disponible à l'adresse [https://github.com/fredericnoel/GEIPAN/](https://github.com/fredericnoel/GEIPAN/) sur votre propre compte GitHub, sur lequel vous travaillerez ; -->
-- le projet contient déjà une partie du code, l'architecture de l'application ainsi qu'un répertoire (_database) contenant des éléments utiles pour la réalisation de votre épreuve ;
-- vous effectuerez vos *commits* dans votre branche *develop* que vous aurez préalablement créée ;
-- optionnellement, vous pouvez utiliser le modèle *GitFlow* et travailler sur vos branches *features* ;
+<!-- - le projet contient déjà une partie du code, l'architecture de l'application ainsi qu'un répertoire (_database) contenant des éléments utiles pour la réalisation de votre épreuve ; -->
+<!-- - vous effectuerez vos *commits* dans votre branche *develop* que vous aurez préalablement créée ; -->
+<!-- - optionnellement, vous pouvez utiliser le modèle *GitFlow* et travailler sur vos branches *features* ; -->
 - la version définitive de votre application (celle qui sera évaluée), devra être dans votre branche *main* ou *master* ;
 - votre dépôt devra être public, vous me communiquerez l'URL à la fin de la journée ;
 - vous exporterez au format SQL votre base de données renseignée que vous placerez dans le répertoire _database du projet ;
@@ -52,7 +52,7 @@ Le projet dispose déjà d'une architecture semblable à celle vue en cours, à 
 - un répertoire *classes* contenant une classe Query avec constructeur et destructeur pour instancier vos objets PDO.
 
 Vous devrez réaliser pour ce projet :
-- un processus d'inscription et d'authentification avec les champs classiques (y compris un avatar, pensez à une photo par défaut)
+<!-- - un processus d'inscription et d'authentification avec les champs classiques (y compris un avatar, pensez à une photo par défaut) -->
 - la possibilité pour un utilisateur connecté ou non de déposer un témoignage avec des informations 
     - date et heure de l'événement
     - durée de l'événement
