@@ -10,3 +10,32 @@ body {
 a {
     text-decoration: none;
 }
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
+}
+h2{
+    padding: 1rem;
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 2rem;
+}
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 15rem;
+    height: 2rem;
+    margin: 1rem;
+}
+label{
+    font-size: large;
+    font-weight: 600;
+}
